@@ -1,56 +1,17 @@
-import { items } from "@/data";
-import { Link } from "react-router-dom";
+import { NavBar } from "@/components";
+import { team } from "@/data";
 
-import loulou from "@/assets/loulou.png";
-import kawtar from "@/assets/kawtar.png";
-import hassania from "@/assets/hassania.png";
-import mouna from "@/assets/mouna.png";
-
-interface ITeam {
-  img: string;
-  name: string;
-  occupation: string;
-}
-
-const team: ITeam[] = [
-  {
-    img: mouna,
-    name: "Mouna BERQUEDICH",
-    occupation: "Boss",
-  },
-  {
-    img: loulou,
-    name: "Loubna MOUFID",
-    occupation: "Agent",
-  },
-  {
-    img: kawtar,
-    name: "Kawtar RADAD",
-    occupation: "Agent",
-  },
-  {
-    img: hassania,
-    name: "Hassania CHOUFANE",
-    occupation: "Agent",
-  },
-];
-
+/**
+ *
+ * About component
+ *
+ * @description The About component is the main component that contains the navigation bar, the about content, the team members, and the contact information.
+ * @returns About component
+ */
 const About = () => {
-  const url = window.location.pathname;
   return (
     <div className="w-screen h-screen bg-[#0e0e0e] flex flex-col items-center p-4 gap-8">
-      <nav className="w-fit py-5 px-16 rounded-full border-[1px] border-white border-solid flex items-center justify-center gap-16">
-        {items.map((item, index) => (
-          <Link
-            to={item.path}
-            key={index}
-            className="text-regular text-white transition-all opacity-60 hover:opacity-100 hover:text-white"
-            style={item.path === url ? { opacity: 1 } : {}}
-          >
-            {item.name}
-          </Link>
-        ))}
-      </nav>
+      <NavBar />
       <section className="w-screen flex flex-col items-center justify-center gap-12">
         <article className="w-full flex items-center justify-center gap-12">
           <div className="w-[35vw] gap-6 flex flex-col">

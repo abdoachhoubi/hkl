@@ -1,7 +1,3 @@
-import React from "react";
-import { BackgroundLines, Menu } from "./components/ui";
-import { MenuItem } from "./components/ui/navbar-menu";
-import bg from "@/assets/engine-bg.jpg";
 import { Route, Routes } from "react-router-dom";
 import { About, Dashboard, Home } from "./pages";
 
